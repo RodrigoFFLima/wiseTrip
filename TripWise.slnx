@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TripWise.Api/TripWise.Api.csproj" />
+  <Project Path="TripWise.App/TripWise.App.csproj" />
+</Solution>
