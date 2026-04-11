@@ -1,16 +1,4 @@
-# Build
 bin/
 obj/
-
-# Rider / IntelliJ
 .idea/
-
-# VS Code
-.vscode/
-
-# macOS
 .DS_Store
-
-# MAUI
-*.user
-*.app
