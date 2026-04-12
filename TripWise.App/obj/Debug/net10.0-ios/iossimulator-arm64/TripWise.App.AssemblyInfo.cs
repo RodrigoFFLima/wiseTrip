@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TripWise.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+433b96eee0d64f5c0c4b58105c8519efd2ade8f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TripWise.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TripWise.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

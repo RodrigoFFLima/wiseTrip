@@ -7,20 +7,24 @@ namespace TripWise.Api.Controllers;
 public class TripController : ControllerBase
 {
     [HttpGet("estimate")]
-    public IActionResult Estimate()
+    public IActionResult Estimate([FromQuery] int distance)
     {
-        var distanceKm = 500;
-        var consumptionKmL = 12;
-        var fuelPrice = 6.0;
+        if (distance <= 0)
+            return BadRequest("Distance must be greater than zero.");
 
-        var fuelCost = (distanceKm / consumptionKmL) * fuelPrice;
+        const decimal fuelPrice = 6.0m;
+        const decimal consumptionKmL = 12m;
+        const decimal tollCost = 50m;
+
+        var fuelCost = (distance / consumptionKmL) * fuelPrice;
+        var totalCost = fuelCost + tollCost;
 
         var response = new
         {
-            Distance = distanceKm,
-            FuelCost = fuelCost,
-            TollCost = 50,
-            TotalCost = fuelCost + 50
+            Distance = distance,
+            FuelCost = decimal.Round(fuelCost, 2),
+            TollCost = tollCost,
+            TotalCost = decimal.Round(totalCost, 2)
         };
 
         return Ok(response);
