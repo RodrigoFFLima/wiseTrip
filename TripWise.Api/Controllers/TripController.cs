@@ -7,7 +7,7 @@ namespace TripWise.Api.Controllers;
 public class TripController : ControllerBase
 {
     [HttpGet("estimate")]
-    public IActionResult Estimate([FromQuery] int distance)
+    public IActionResult Estimate([FromQuery] decimal distance)
     {
         if (distance <= 0)
             return BadRequest("Distance must be greater than zero.");
